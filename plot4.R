@@ -4,7 +4,7 @@ mySql <- "SELECT * from file WHERE Date = '1/2/2007' OR Date = '2/2/2007'"
 myFile <- "powerConsumption/household_power_consumption.txt"
 myData <- read.csv2.sql(myFile,mySql)
 myData$DateTime <- strptime(paste(myData$Date, myData$Time), "%d/%m/%Y %H:%M:%S") 
-quartz()
+
 png(filename = "plot4.png", width = 480, height = 480, pointsize = 11, bg = "white")
 par(mfrow=c(2, 2))
 
